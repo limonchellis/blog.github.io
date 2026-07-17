@@ -3,8 +3,6 @@
    Farbwelt: Pastellgelb & Blattgrün
    ========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
-
 :root {
     --pastel-yellow: #FFF6D8;
     --pastel-yellow-soft: #FFFBEF;
@@ -20,9 +18,9 @@
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     background-color: var(--pastel-yellow);
-    color: var(--text-dark);
+    color: var(--leaf-green-dark);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -30,14 +28,14 @@ body {
 
 /* ---------- Header ---------- */
 header {
-    background-color: var(--leaf-green-light);
+    background-color: var(--pastel-yellow);
     padding: 30px 20px;
     border-bottom: 4px solid var(--leaf-green);
 }
 
 header h1 {
     margin: 0 0 10px 0;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 2rem;
     color: var(--leaf-green-dark);
 }
@@ -46,13 +44,13 @@ header a {
     display: inline-block;
     margin-top: 8px;
     color: var(--leaf-green-dark) !important;
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 header a:hover {
-    color: var(--text-dark) !important;
+    color: var(--leaf-green) !important;
 }
 
 /* ---------- Main-Bereich ---------- */
@@ -60,6 +58,7 @@ main {
     padding: 40px 20px;
     max-width: 900px;
     margin: 0 auto;
+    background-color: var(--pastel-yellow);
 }
 
 main h2 {
@@ -71,6 +70,7 @@ main h2 {
 main p {
     line-height: 1.6;
     font-size: 1.05rem;
+    color: var(--leaf-green-dark);
 }
 
 /* ---------- Event-Karte (Datum & Ort) ---------- */
@@ -79,12 +79,12 @@ main p {
     align-items: center;
     gap: 20px;
     background-color: var(--pastel-yellow-soft);
-    border: 2px solid var(--leaf-green-light);
+    border: 2px solid var(--leaf-green);
     border-radius: 18px;
     padding: 14px 28px;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    font-weight: 600;
+    font-weight: bold;
     color: var(--leaf-green-dark);
 }
 
@@ -99,25 +99,26 @@ main p {
 .event-card .divider {
     width: 1px;
     height: 24px;
-    background-color: var(--leaf-green-light);
+    background-color: var(--leaf-green);
 }
 
-/* ---------- Button (Startseite -> Abenteuer) ---------- */
+/* ---------- Buttons (Outline-Stil) ---------- */
 .btn-adventure {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--leaf-green);
-    color: white;
+    background-color: var(--pastel-yellow-soft);
+    color: var(--leaf-green-dark);
     text-decoration: none;
+    border: 2px solid var(--leaf-green);
     border-radius: 25px;
-    font-weight: 600;
-    font-family: 'Quicksand', sans-serif;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', serif;
+    transition: background 0.3s, transform 0.2s, color 0.2s;
 }
 
 .btn-adventure:hover {
-    background-color: var(--leaf-green-dark);
+    background-color: var(--leaf-green);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
@@ -134,7 +135,7 @@ main p {
     max-width: 380px;
     margin: 100px auto;
     background-color: var(--pastel-yellow-soft);
-    border: 2px solid var(--leaf-green-light);
+    border: 2px solid var(--leaf-green);
     border-radius: 18px;
     padding: 35px 30px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
@@ -143,51 +144,54 @@ main p {
 #login-box h2 {
     color: var(--leaf-green-dark);
     margin-top: 0;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 #login-box input {
-    font-family: 'Quicksand', sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     padding: 10px 14px;
     margin: 5px;
     font-size: 16px;
-    border: 2px solid var(--leaf-green-light);
+    background-color: var(--pastel-yellow);
+    color: var(--leaf-green-dark);
+    border: 2px solid var(--leaf-green);
     border-radius: 12px;
     outline: none;
     transition: border-color 0.2s;
 }
 
 #login-box input:focus {
-    border-color: var(--leaf-green);
+    border-color: var(--leaf-green-dark);
 }
 
 #login-box button {
-    font-family: 'Quicksand', sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
-    font-weight: 600;
-    background-color: var(--leaf-green);
-    color: white;
-    border: none;
+    font-weight: bold;
+    background-color: var(--pastel-yellow-soft);
+    color: var(--leaf-green-dark);
+    border: 2px solid var(--leaf-green);
     border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, color 0.2s;
 }
 
 #login-box button:hover {
-    background-color: var(--leaf-green-dark);
+    background-color: var(--leaf-green);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
 #error-message {
     color: #c0392b;
-    font-weight: 600;
+    font-weight: bold;
     min-height: 20px;
 }
 
 #secret-content h1 {
     color: var(--leaf-green-dark);
-    font-weight: 700;
+    font-weight: bold;
     margin-top: 25px;
 }
