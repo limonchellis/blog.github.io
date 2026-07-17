@@ -17,10 +17,12 @@
     <!-- Geheimer Inhalt -->
     <div id="secret-content" class="hidden">
         <!-- Ersetze 'limonchelli-video.mp4' mit dem Dateinamen deines Videos -->
-        <video class="banner-video" autoplay muted loop playsinline>
+        <video id="banner-video" class="banner-video" autoplay muted loop playsinline>
             <source src="limonchellis-video.mp4" type="video/mp4">
             Dein Browser unterstützt das Video-Tag leider nicht.
         </video>
+        <!-- Wird automatisch angezeigt, falls das Video nicht abgespielt werden kann -->
+        <img id="banner-fallback" class="banner-video hidden" src="limonchellis-foto.jpg" alt="Limonchelli Adventures Banner">
         <h1>Willkommen zu den limonchelli adventures !</h1>
         <div class="navigation-container">
             <a href="abenteuer.html" class="btn-adventure">Zu den Abenteuern</a>
@@ -30,11 +32,60 @@
     <div id="emoji-rain"></div>
 
     <script>
+        // Fallback: falls das Video nicht geladen/abgespielt werden kann, Bild zeigen
+        const bannerVideo = document.getElementById('banner-video');
+        const bannerFallback = document.getElementById('banner-fallback');
+
+        function showBannerFallback() {
+            bannerVideo.classList.add('hidden');
+            bannerFallback.classList.remove('hidden');
+        }
+
+        bannerVideo.addEventListener('error', showBannerFallback);
+        bannerVideo.querySelector('source').addEventListener('error', showBannerFallback);
+        // Falls das Video nach kurzer Zeit gar nicht startet (z.B. blockiert), ebenfalls Bild zeigen
+        setTimeout(() => {
+            if (bannerVideo.readyState === 0) {
+                showBannerFallback();
+            }
+        }, 3000);
+
         function checkPassword() {
             const input = document.getElementById('password-input').value;
             // Ersetze 'hariksee' durch dein Wunschpasswort
             if (input === 'hariksee') {
                 document.getElementById('login-box').classList.add('hidden');
+                document.getElementById('secret-content').classList.remove('hidden');
+                startEmojiRain();
+            } else {
+                document.getElementById('error-message').innerText = 'Falsches Passwort!';
+            }
+        }
+
+        function startEmojiRain() {
+            const emojis = ['🍋', '🍋', '🍋', '☀️','🍋'', '🍋'];
+            const container = document.getElementById('emoji-rain');
+            const totalEmojis = 40;
+            const durationMs = 6000; // Regen läuft 6 Sekunden
+
+            for (let i = 0; i < totalEmojis; i++) {
+                setTimeout(() => {
+                    const span = document.createElement('span');
+                    span.className = 'falling-emoji';
+                    span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    span.style.left = Math.random() * 100 + 'vw';
+                    span.style.fontSize = (26 + Math.random() * 22) + 'px';
+                    span.style.animationDuration = (3 + Math.random() * 2.5) + 's';
+                    container.appendChild(span);
+
+                    // Element nach Ende der Animation wieder entfernen
+                    span.addEventListener('animationend', () => span.remove());
+                }, Math.random() * durationMs);
+            }
+        }
+    </script>
+</body>
+</html>                document.getElementById('login-box').classList.add('hidden');
                 document.getElementById('secret-content').classList.remove('hidden');
                 startEmojiRain();
             } else {
