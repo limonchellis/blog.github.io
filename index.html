@@ -23,6 +23,9 @@
             <a href="abenteuer.html" class="btn-adventure">Zu den Abenteuern</a>
         </div>
     </div>
+    <!-- Container für die fallenden Emojis -->
+    <div id="emoji-rain"></div>
+
     <script>
         function checkPassword() {
             const input = document.getElementById('password-input').value;
@@ -30,35 +33,33 @@
             if (input === 'hariksee') {
                 document.getElementById('login-box').classList.add('hidden');
                 document.getElementById('secret-content').classList.remove('hidden');
+                startEmojiRain();
             } else {
                 document.getElementById('error-message').innerText = 'Falsches Passwort!';
             }
         }
-    </script>
-</body>
-</html>
 
-        <!-- Füge diesen Code in deine index.html ein -->
-        <div class="navigation-container">
-            <a href="abenteuer.html" class="btn-adventure">Zu den Abenteuern</a>
-        </div>
+        function startEmojiRain() {
+            const emojis = ['🍋', '🍹', '🌿', '☀️', '🎉', '🍸'];
+            const container = document.getElementById('emoji-rain');
+            const totalEmojis = 40;
+            const durationMs = 6000; // Regen läuft 6 Sekunden
 
- 
-    </div>
+            for (let i = 0; i < totalEmojis; i++) {
+                setTimeout(() => {
+                    const span = document.createElement('span');
+                    span.className = 'falling-emoji';
+                    span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                    span.style.left = Math.random() * 100 + 'vw';
+                    span.style.fontSize = (18 + Math.random() * 22) + 'px';
+                    span.style.animationDuration = (3 + Math.random() * 2.5) + 's';
+                    container.appendChild(span);
 
-
-    <script>
-        function checkPassword() {
-            const input = document.getElementById('password-input').value;
-            // Ersetze 'geheim123' durch dein Wunschpasswort
-            if (input === 'hariksee') { 
-                document.getElementById('login-box').classList.add('hidden');
-                document.getElementById('secret-content').classList.remove('hidden');
-            } else {
-                document.getElementById('error-message').innerText = 'Falsches Passwort!';
+                    // Element nach Ende der Animation wieder entfernen
+                    span.addEventListener('animationend', () => span.remove());
+                }, Math.random() * durationMs);
             }
         }
     </script>
-
 </body>
 </html>
