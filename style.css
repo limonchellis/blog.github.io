@@ -195,3 +195,34 @@ main p {
     font-weight: bold;
     margin-top: 25px;
 }
+
+/* ---------- Emoji-Regen ---------- */
+#emoji-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.falling-emoji {
+    position: absolute;
+    top: -10vh;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(115vh) rotate(360deg);
+        opacity: 0.9;
+    }
+}
