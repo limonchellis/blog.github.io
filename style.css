@@ -1,17 +1,193 @@
-/* Button-Styling für deine CSS-Datei */
+/* ==========================================
+   limonchelli adventures – Stylesheet
+   Farbwelt: Pastellgelb & Blattgrün
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+    --pastel-yellow: #FFF6D8;
+    --pastel-yellow-soft: #FFFBEF;
+    --leaf-green: #7CB342;
+    --leaf-green-dark: #558B2F;
+    --leaf-green-light: #C5E1A5;
+    --text-dark: #3B4A2A;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--pastel-yellow);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: var(--leaf-green-light);
+    padding: 30px 20px;
+    border-bottom: 4px solid var(--leaf-green);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--leaf-green-dark);
+}
+
+header a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--leaf-green-dark) !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header a:hover {
+    color: var(--text-dark) !important;
+}
+
+/* ---------- Main-Bereich ---------- */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h2 {
+    color: var(--leaf-green-dark);
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+main p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* ---------- Event-Karte (Datum & Ort) ---------- */
+.event-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--pastel-yellow-soft);
+    border: 2px solid var(--leaf-green-light);
+    border-radius: 18px;
+    padding: 14px 28px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    font-weight: 600;
+    color: var(--leaf-green-dark);
+}
+
+.event-card .event-date,
+.event-card .event-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+}
+
+.event-card .divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--leaf-green-light);
+}
+
+/* ---------- Button (Startseite -> Abenteuer) ---------- */
 .btn-adventure {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #ff5722; /* Schönes Erlebnis-Orange (Farbe anpassen) */
+    background-color: var(--leaf-green);
     color: white;
     text-decoration: none;
     border-radius: 25px;
-    font-weight: bold;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: background 0.3s, transform 0.2s;
 }
 
 .btn-adventure:hover {
-    background-color: #e64a19; /* Dunkler beim Drüberhovern */
+    background-color: var(--leaf-green-dark);
     transform: translateY(-2px);
+}
+
+.navigation-container {
+    margin-top: 25px;
+}
+
+/* ---------- Login-Box (index.html) ---------- */
+.hidden {
+    display: none;
+}
+
+#login-box {
+    max-width: 380px;
+    margin: 100px auto;
+    background-color: var(--pastel-yellow-soft);
+    border: 2px solid var(--leaf-green-light);
+    border-radius: 18px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+#login-box h2 {
+    color: var(--leaf-green-dark);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+#login-box input {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 14px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid var(--leaf-green-light);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#login-box input:focus {
+    border-color: var(--leaf-green);
+}
+
+#login-box button {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--leaf-green);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#login-box button:hover {
+    background-color: var(--leaf-green-dark);
+    transform: translateY(-2px);
+}
+
+#error-message {
+    color: #c0392b;
+    font-weight: 600;
+    min-height: 20px;
+}
+
+#secret-content h1 {
+    color: var(--leaf-green-dark);
+    font-weight: 700;
+    margin-top: 25px;
 }
