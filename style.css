@@ -1,0 +1,17 @@
+/* Button-Styling für deine CSS-Datei */
+.btn-adventure {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff5722; /* Schönes Erlebnis-Orange (Farbe anpassen) */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-adventure:hover {
+    background-color: #e64a19; /* Dunkler beim Drüberhovern */
+    transform: translateY(-2px);
+}
