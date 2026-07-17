@@ -16,8 +16,11 @@
     </div>
     <!-- Geheimer Inhalt -->
     <div id="secret-content" class="hidden">
-        <!-- Ersetzen Sie 'ihr-bild.jpg' mit dem Link zu Ihrem Foto -->
-        <img src="limonchello.jpeg" alt="Limonchelli Adventures Banner" style="width:60%; max-width:1200px; height:auto; border-radius: 12px;">
+        <!-- Ersetze 'limonchelli-video.mp4' mit dem Dateinamen deines Videos -->
+        <video class="banner-video" autoplay muted loop playsinline>
+            <source src="limonchelli-video.mp4" type="video/mp4">
+            Dein Browser unterstützt das Video-Tag leider nicht.
+        </video>
         <h1>Willkommen zu den limonchelli adventures !</h1>
         <div class="navigation-container">
             <a href="abenteuer.html" class="btn-adventure">Zu den Abenteuern</a>
@@ -40,7 +43,7 @@
         }
 
         function startEmojiRain() {
-            const emojis = ['🍋', '🍹', '🌿', '☀️', '🎉', '🍸'];
+            const emojis = ['🍋', '🍋', '🌿', '☀️', '🍋', '🍋'];
             const container = document.getElementById('emoji-rain');
             const totalEmojis = 40;
             const durationMs = 6000; // Regen läuft 6 Sekunden
@@ -51,7 +54,7 @@
                     span.className = 'falling-emoji';
                     span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
                     span.style.left = Math.random() * 100 + 'vw';
-                    span.style.fontSize = (18 + Math.random() * 22) + 'px';
+                    span.style.fontSize = (26 + Math.random() * 22) + 'px';
                     span.style.animationDuration = (3 + Math.random() * 2.5) + 's';
                     container.appendChild(span);
 
