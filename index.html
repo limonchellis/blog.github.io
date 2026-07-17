@@ -1,32 +1,42 @@
-
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>limonchelli adventures</title>
-    <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        .hidden { display: none; }
-        input, button { padding: 10px; margin: 5px; font-size: 16px; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Login-Bereich -->
     <div id="login-box">
-        <h2>Passwort: </h2>
+        <h2>Passwort:</h2>
         <input type="password" id="password-input" placeholder="Passwort">
         <button onclick="checkPassword()">Einloggen</button>
-        <p id="error-message" style="color: red;"></p>
+        <p id="error-message"></p>
     </div>
-
     <!-- Geheimer Inhalt -->
     <div id="secret-content" class="hidden">
         <!-- Ersetzen Sie 'ihr-bild.jpg' mit dem Link zu Ihrem Foto -->
-        <img src="limonchello.jpeg" alt="Limonchelli Adventures Banner" style="width:60%; max-width:1200px; height:auto;">
+        <img src="limonchello.jpeg" alt="Limonchelli Adventures Banner" style="width:60%; max-width:1200px; height:auto; border-radius: 12px;">
         <h1>Willkommen zu den limonchelli adventures !</h1>
+        <div class="navigation-container">
+            <a href="abenteuer.html" class="btn-adventure">Zu den Abenteuern</a>
+        </div>
+    </div>
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('password-input').value;
+            // Ersetze 'hariksee' durch dein Wunschpasswort
+            if (input === 'hariksee') {
+                document.getElementById('login-box').classList.add('hidden');
+                document.getElementById('secret-content').classList.remove('hidden');
+            } else {
+                document.getElementById('error-message').innerText = 'Falsches Passwort!';
+            }
+        }
+    </script>
+</body>
+</html>
 
         <!-- Füge diesen Code in deine index.html ein -->
         <div class="navigation-container">
