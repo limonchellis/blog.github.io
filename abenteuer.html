@@ -12,19 +12,48 @@
         <a href="index.html">← Zurück zur Startseite</a>
     </header>
     <main>
-        <h2>Das Abenteuer Eifel beginnt!</h2>
+        <h2>Wähle dein Abenteuer</h2>
 
-        <!-- Container für die Nebeneinander-Ausrichtung -->
-        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <img src="eifeldream.png" alt="Der Eifel Dream" style="width: 30%; min-width: 220px; max-width: 1200px; height: auto; border-radius: 12px;">
-                 <!-- Event-Info: Datum & Ort -->
-            <div class="event-card">
-                <span class="event-date">📅 12.–14. September 2026</span>
-                <span class="divider"></span>
-                <span class="event-location">📍 Eifel, Deutschland</span>
-            </div>
+        <div class="adventure-grid">
 
-            <p style="max-width: 500px; text-align: left;">Ein unvergessliches Wochenende kommt auf uns zu! Wird Angela ihren Sarti bekommen? Hat Jil genug zum Anziehen dabei? Ueber das alles werden wir hier berichten!</p>
+            <a href="eifel.html" class="adventure-card">
+                <img src="eifeldream.png" alt="Der Eifel Dream">
+                <div class="adventure-card-body">
+                    <h3>Das Abenteuer Eifel</h3>
+                    <div class="event-card">
+                        <span class="event-date">📅 17.–19. Juli 2026</span>
+                        <span class="divider"></span>
+                        <span class="event-location">📍 Bad Muenstereifel, Deutschland</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="weihnachtsfeier.html" class="adventure-card">
+                <!-- TODO: Bild ersetzen, sobald hochgeladen -->
+                <img src="limonchellis-foto.jpg" alt="Weihnachtsfeier">
+                <div class="adventure-card-body">
+                    <h3>Weihnachtsfeier</h3>
+                    <div class="event-card">
+                        <span class="event-date">📅 28.11.2026</span>
+                        <span class="divider"></span>
+                        <span class="event-location">📍 tbd</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="wochenendspass2027.html" class="adventure-card">
+                <!-- TODO: Bild ersetzen, sobald hochgeladen -->
+                <img src="limonchellis-foto.jpg" alt="Wochenendspaß 2027">
+                <div class="adventure-card-body">
+                    <h3>Wochenendspaß 2027</h3>
+                    <div class="event-card">
+                        <span class="event-date">📅 19.–22. August 2027</span>
+                        <span class="divider"></span>
+                        <span class="event-location">📍tbd</span>
+                    </div>
+                </div>
+            </a>
+
         </div>
     </main>
 </body>
