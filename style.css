@@ -188,9 +188,16 @@ main p {
 }
 
 .adventure-card-body h3 {
-    margin: 0 0 14px;
+    margin: 0 0 10px;
     color: var(--leaf-green-dark);
     font-size: 1.25rem;
+}
+
+.adventure-card-body p {
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--leaf-green-dark);
 }
 
 .adventure-card .event-card {
@@ -205,6 +212,37 @@ main p {
 
 .adventure-card .event-card .divider {
     display: none;
+}
+
+/* ---------- Foto-Galerie (automatisches Layout) ---------- */
+.photo-gallery {
+    column-count: 3;
+    column-gap: 16px;
+    width: 100%;
+    margin: 10px 0 20px;
+}
+
+.photo-gallery img,
+.photo-gallery video {
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+@media (max-width: 800px) {
+    .photo-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        column-count: 1;
+    }
 }
 
 /* ---------- Login-Box (index.html) ---------- */
