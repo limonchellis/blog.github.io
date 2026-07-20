@@ -1,4 +1,4 @@
-rahr <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,69 @@ rahr <!DOCTYPE html>
     </header>
     <main>
         <h2>Das Abenteuer Eifel beginnt!</h2>
-        <!-- Container für die Nebeneinander-Ausrichtung -->
-        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <img src="eifeldream.png" alt="Der Eifel Dream" style="width: 30%; min-width: 220px; max-width: 1200px; height: auto; border-radius: 12px;">
-                 <!-- Event-Info: Datum & Ort -->
-            <div class="event-card">
-                <span class="event-date">📅 12.–14. September 2026</span>
-                <span class="divider"></span>
-                <span class="event-location">📍 Eifel, Deutschland</span>
-            </div>
-            <p style="max-width: 500px; text-align: left;">Ein unvergessliches Wochenende kommt auf uns zu! Wird Angela ihren Sarti bekommen? Hat Jil genug zum Anziehen dabei? Hier erfahrt ihr mehr!</p>
+
+        <!-- Event-Info: Datum & Ort -->
+        <div class="event-card">
+            <span class="event-date">📅 12.–14. September 2026</span>
+            <span class="divider"></span>
+            <span class="event-location">📍 Eifel, Deutschland</span>
+        </div>
+
+        <p>Was ein Traum! Unendlich viel Spielespass, gute Laune und Emotionen! Und zum ersten mal war ein kleiner Kerl dabei, in den wir jetzt schon alle verliebt sind   </p>
+
+        <!--
+            Foto-Galerie: ordnet Bilder automatisch in Spalten an (Masonry-Stil),
+            egal wie viele Fotos oder welches Format.
+            Neues Foto hinzufügen: Bilddatei in den Ordner legen und hier
+            eine neue <img>-Zeile ergänzen.
+        -->
+        <div class="photo-gallery">
+            <img src="eifeldream.png" alt="Der Eifel Dream">
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Abenteuer Eifel</title>
+    <link rel="stylesheet" href="style.css"> <!-- Gleiches Design nutzen -->
+</head>
+<body>
+    <header>
+        <h1>Willkommen bei den Abenteuern der Limonchellis!</h1>
+        <a href="abenteuer.html">← Zurück zu allen Abenteuern</a>
+    </header>
+    <main>
+        <h2>Das Abenteuer Eifel beginnt!</h2>
+
+        <!-- Event-Info: Datum & Ort -->
+        <div class="event-card">
+            <span class="event-date">📅 12.–14. September 2026</span>
+            <span class="divider"></span>
+            <span class="event-location">📍 Eifel, Deutschland</span>
+        </div>
+
+
+        <!--
+            Foto-Galerie: ordnet Bilder automatisch in Spalten an (Masonry-Stil),
+            egal wie viele Fotos oder welches Format.
+            Neues Foto hinzufügen: Bilddatei in den Ordner legen und hier
+            eine neue <img>-Zeile ergänzen.
+        -->
+        <div class="photo-gallery">
+            <img src="eifel1.png" alt="Der Eifel Dream">
+            <img src="eifel2.png" alt="Der Eifel Dream">
+            <img src="eifel3.png" alt="Der Eifel Dream">
+            <img src="eifel4.png" alt="Der Eifel Dream">
+            <img src="eifel5.png" alt="Der Eifel Dream">
         </div>
     </main>
 </body>
